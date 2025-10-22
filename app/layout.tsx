@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
+import { NavigationMenuDemo } from "@/components/navigation-menu";
+import { ModeToggle } from "@/components/mode-toggle";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,9 +31,18 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <div className="fixed z-50  w-full top-0 left-0">
+            <div className="w-full h-2 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 animate-gradient-x"></div>
+            <div className="mt-4 flex justify-center h-full w-full backdrop-blur-sm bg-white/30 dark:bg-black/30">
+              <NavigationMenuDemo />
+              <ModeToggle />
+            </div>
+          </div>
           {children}
+          <div className="h-16" />
         </ThemeProvider>
+
       </body>
-    </html>
+    </html >
   );
 }
