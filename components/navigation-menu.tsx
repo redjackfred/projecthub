@@ -108,7 +108,7 @@ export function NavigationMenuDemo() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/docs">Docs</Link>
+            <Link href="/about">About Me</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem className="hidden md:block">
@@ -150,7 +150,7 @@ export function NavigationMenuDemo() {
             <ul className="grid w-[200px] gap-4">
               <li>
                 <NavigationMenuLink asChild>
-                  <Link href="#">Components</Link>
+                  <Link href="/projects">Projects</Link>
                 </NavigationMenuLink>
                 <NavigationMenuLink asChild>
                   <Link href="#">Documentation</Link>
